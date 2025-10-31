@@ -165,3 +165,10 @@ footer {
 .contact-form button:hover {
   background: #800000;
 }
+
+#form-status {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
