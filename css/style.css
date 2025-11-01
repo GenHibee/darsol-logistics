@@ -356,6 +356,7 @@ form#contact-form button {
   form#contact-form {
     padding: 20px;
   }
+}
   /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .contact-section {
