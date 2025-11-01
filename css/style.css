@@ -233,7 +233,7 @@ form#contact-form {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: 40px auto;
+  margin: 40px, 0px, 40px, 60px;
   padding: 25px 30px;
   background-color: #fff;
   border-radius: 12px;
