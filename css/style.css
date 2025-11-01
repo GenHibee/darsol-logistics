@@ -332,16 +332,15 @@ form#contact-form button {
 
 /* ---------- Responsive (mobile/tablet) ---------- */
 @media (max-width: 800px) {
-  .contact-section {
+  .contact-container {
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
   }
 
   form#contact-form,
   .contact-info {
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
   }
 
   .contact-info {
