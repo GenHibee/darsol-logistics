@@ -229,9 +229,15 @@ footer {
 
 /* ---------- Contact Section (NEW) ---------- */
 .contact-section {
-  padding: 60px 0;
-  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 80px;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
+  gap: 40px;
 }
+
 
 /* ensure .container centers content and limits width (only add if you don't already have .container) */
 .container {
@@ -262,15 +268,16 @@ footer {
 }
 
 /* FORM (left) */
-form#contact-form {
-  flex: 1 1 520px;      /* grows, shrinks, preferred width */
+ form#contact-form {
+  flex: 1;
   min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+}
+
 }
 
 /* Inputs stacked and full width */
@@ -300,12 +307,15 @@ form#contact-form button {
 
 /* CONTACT INFO (right) */
 .contact-info {
-  flex: 0 0 320px;      /* fixed-ish width on right */
+  flex: 1;
   min-width: 250px;
-  background: #fff;
-  padding: 22px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+}
+
 }
 
 .contact-info h3 {
