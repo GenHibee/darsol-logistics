@@ -27,13 +27,21 @@
       <h2>Contact Us</h2>
       <p>We’d love to hear from you! Please fill out the form below for inquiries or partnership opportunities.</p>
 
-      <form id="contact-form" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-        <p id="form-status"></p>
+   <!-- Contact Form -->
+<form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
 </form>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span id="popup-close">&times;</span>
+    <h2 id="popup-title"></h2>
+    <p id="popup-message"></p>
+  </div>
 
     </div>
   </section>
@@ -45,6 +53,7 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
