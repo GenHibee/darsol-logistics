@@ -357,23 +357,4 @@ form#contact-form button {
     padding: 20px;
   }
 }
-  /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column;   /* Stack items vertically */
-    padding: 40px 20px;       /* Reduce padding on small screens */
-  }
-
-  form#contact-form,
-  .contact-info {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .contact-info {
-    margin-top: 30px;         /* Add spacing between form and info box */
-  }
-}
-
-}
 
