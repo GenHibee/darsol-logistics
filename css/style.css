@@ -347,3 +347,37 @@ form#contact-form button {
     margin-top: 30px;
   }
 }
+
+/*style to Icon*/
+.contact-info i {
+  color: #b30000;           /* your brand color */
+  margin-right: 10px;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #444;
+  line-height: 1.5;
+}
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1da851;
+}
+
