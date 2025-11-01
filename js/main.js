@@ -1,4 +1,3 @@
-<script>
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", async (e) => {
@@ -28,4 +27,3 @@ form.addEventListener("submit", async (e) => {
     status.style.color = "red";
   }
 });
-</script>
