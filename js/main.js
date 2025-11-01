@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-        showPopup("✅ Message Sent!", "Your message has been delivered successfully.");
+        showPopup("✅ Message Sent!", "Your message has been delivered successfully. We would get back as soon as Possible.");
         form.reset();
       } else {
         showPopup("❌ Failed to Send", "Please try again or check your connection.", false);
