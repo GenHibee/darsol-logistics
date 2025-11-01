@@ -227,91 +227,90 @@ footer {
   }
 }
 
-
+/* ---------- Contact Section (NEW) ---------- */
 .contact-section {
-  padding: 60px 80px;
+  padding: 60px 0;
   background-color: #f8f8f8;
 }
 
-.contact-section h2 {
+/* ensure .container centers content and limits width (only add if you don't already have .container) */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* inner spacing */
+.contact-inner h2 {
   color: #b30000;
   font-size: 28px;
   margin-bottom: 10px;
 }
 
-.contact-section p {
+.contact-inner p {
   color: #555;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-/* FLEX CONTAINER */
+/* FLEX layout: form left, info right */
 .contact-container {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap; /* makes it responsive */
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* collapses to column on small screens */
 }
 
-/* FORM STYLING */
+/* FORM (left) */
 form#contact-form {
-  flex: 1;
+  flex: 1 1 520px;      /* grows, shrinks, preferred width */
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  padding: 25px 30px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
+/* Inputs stacked and full width */
 form#contact-form input,
 form#contact-form textarea {
   width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
   font-size: 15px;
-  font-family: "Segoe UI", sans-serif;
-  transition: all 0.2s ease-in-out;
+  font-family: inherit;
 }
 
-form#contact-form input:focus,
-form#contact-form textarea:focus {
-  border-color: #b30000;
-  outline: none;
-  box-shadow: 0 0 4px rgba(179, 0, 0, 0.4);
-}
-
+/* Button */
 form#contact-form button {
-  background-color: #b30000;
+  width: auto; /* lets button size to content */
+  align-self: flex-start; /* keeps button on left under inputs */
+  background: #b30000;
   color: #fff;
-  border: none;
-  padding: 12px;
+  padding: 10px 18px;
   border-radius: 8px;
-  font-size: 16px;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
 }
 
-form#contact-form button:hover {
-  background-color: #900000;
-}
-
-/* CONTACT INFO BOX */
+/* CONTACT INFO (right) */
 .contact-info {
-  flex: 1;
+  flex: 0 0 320px;      /* fixed-ish width on right */
   min-width: 250px;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 .contact-info h3 {
   color: #b30000;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-size: 20px;
 }
 
@@ -321,26 +320,30 @@ form#contact-form button:hover {
   line-height: 1.5;
 }
 
-/* WHATSAPP BUTTON */
 .whatsapp-btn {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 8px;
   background-color: #25D366;
   color: #fff;
-  padding: 10px 15px;
+  padding: 10px 14px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease;
 }
 
-.whatsapp-btn:hover {
-  background-color: #1ebd5a;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* Responsive: stack columns on narrow screens */
+@media (max-width: 800px) {
   .contact-container {
     flex-direction: column;
   }
+
+  form#contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+  form#contact-form {
+    padding: 20px;
+  }
 }
+
