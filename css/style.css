@@ -334,7 +334,7 @@ form#contact-form button {
 @media (max-width: 800px) {
   .contact-container {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   form#contact-form,
