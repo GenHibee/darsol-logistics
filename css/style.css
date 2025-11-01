@@ -232,10 +232,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 60px 80px;
+  padding: 40px 20px;
   background-color: #f9f9f9;
   gap: 40px;
   flex-wrap: nowrap;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
 /* Optional container wrapper */
