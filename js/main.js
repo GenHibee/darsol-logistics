@@ -1,29 +1,48 @@
-const form = document.getElementById("contact-form");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("popup");
+  const popupTitle = document.getElementById("popup-title");
+  const popupMessage = document.getElementById("popup-message");
+  const popupClose = document.getElementById("popup-close");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const status = document.getElementById("form-status");
-  const data = new FormData(form);
-
-  try {
-    const response = await fetch("https://formspree.io/f/mjkpajqq", {
-      method: "POST",
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (response.ok) {
-      status.innerHTML = "✅ Message sent successfully! We'll get back to you soon.";
-      status.style.color = "green";
-      form.reset();
-    } else {
-      status.innerHTML = "⚠️ Oops! There was a problem sending your message.";
-      status.style.color = "red";
-    }
-  } catch (error) {
-    status.innerHTML = "❌ Network error. Please try again later.";
-    status.style.color = "red";
+  // Function to show popup
+  function showPopup(title, message, success = true) {
+    popupTitle.textContent = title;
+    popupMessage.textContent = message;
+    popupContent = popup.querySelector(".popup-content");
+    popupContent.style.borderTop = success ? "6px solid #4CAF50" : "6px solid #f44336";
+    popup.style.display = "flex";
   }
+
+  // Close popup
+  popupClose.addEventListener("click", () => (popup.style.display = "none"));
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+
+  // Form submit
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: json,
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.ok) {
+        showPopup("✅ Message Sent!", "Your message has been delivered successfully.");
+        form.reset();
+      } else {
+        showPopup("❌ Failed to Send", "Please try again or check your connection.", false);
+      }
+    } catch (error) {
+      showPopup("⚠️ Error", "Something went wrong. Please try again later.", false);
+    }
+  });
 });
