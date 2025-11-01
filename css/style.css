@@ -342,19 +342,7 @@ form#contact-form button {
 }
 
 /* Responsive: stack columns on narrow screens */
-@media (max-width: 800px) {
-  .contact-container {
-    flex-direction: column;
-  }
 
-  form#contact-form,
-  .contact-info {
-    width: 100%;
-  }
-
-  form#contact-form {
-    padding: 20px;
-  }
 
   /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
