@@ -234,7 +234,7 @@ footer {
   align-items: flex-start;
   padding: 60px 80px;
   background-color: #f9f9f9;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 40px;
 }
 
@@ -271,7 +271,7 @@ footer {
  form#contact-form {
   flex: 1;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 600px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -308,7 +308,7 @@ form#contact-form button {
 /* CONTACT INFO (right) */
 .contact-info {
   flex: 1;
-  min-width: 250px;
+  min-width: 300px;
   max-width: 400px;
   background-color: #fff;
   border-radius: 12px;
@@ -345,8 +345,9 @@ form#contact-form button {
 /* Responsive: stack columns on narrow screens */
 @media (max-width: 800px) {
   .contact-section {
-    flex-direction: column;   /* Stack form and contact info vertically */
-    padding: 40px 20px;       /* Reduce padding on smaller screens */
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
   }
 
   form#contact-form,
@@ -355,12 +356,8 @@ form#contact-form button {
     width: 100%;
   }
 
-  form#contact-form {
-    padding: 20px;
-  }
-
   .contact-info {
-    margin-top: 30px;         /* Add space between form and info card */
+    margin-top: 30px;
   }
 }
 
