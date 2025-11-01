@@ -278,7 +278,7 @@ form#contact-form button:hover {
 
 /* Responsive Centering */
 .contact-section {
-  text-align: center;
+  text-align: left;
 }
 
 .contact-section h2 {
