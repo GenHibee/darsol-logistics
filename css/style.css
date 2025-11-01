@@ -341,27 +341,12 @@ form#contact-form button {
   font-weight: 600;
 }
 
+
 /* Responsive: stack columns on narrow screens */
-
 @media (max-width: 800px) {
-  .contact-container {
-    flex-direction: column;
-  }
-
-  form#contact-form,
-  .contact-info {
-    width: 100%;
-  }
-
-  form#contact-form {
-    padding: 20px;
-  }
-
-  /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
   .contact-section {
-    flex-direction: column;   /* Stack items vertically */
-    padding: 40px 20px;       /* Reduce padding on small screens */
+    flex-direction: column;   /* Stack form and contact info vertically */
+    padding: 40px 20px;       /* Reduce padding on smaller screens */
   }
 
   form#contact-form,
@@ -370,10 +355,12 @@ form#contact-form button {
     width: 100%;
   }
 
-  .contact-info {
-    margin-top: 30px;         /* Add spacing between form and info box */
+  form#contact-form {
+    padding: 20px;
   }
-}
 
+  .contact-info {
+    margin-top: 30px;         /* Add space between form and info card */
+  }
 }
 
