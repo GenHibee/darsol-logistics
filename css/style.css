@@ -355,6 +355,11 @@ form#contact-form button {
   transform: scale(1.05);
 }
 
+/* Force all text and links inside the red card to be white */
+.contact-info, 
+.contact-info * {
+  color: #fff !important;
+}
 
 /* ---------- Responsive (mobile/tablet) ---------- */
 @media (max-width: 800px) {
