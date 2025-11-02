@@ -19,6 +19,7 @@ header {
   padding: 1rem 0;
 }
 
+/* Container inside Header */
 header .container {
   width: 90%;
   margin: auto;
@@ -27,6 +28,7 @@ header .container {
   align-items: center;
 }
 
+/* Logo Section */
 .logo {
   display: flex;
   align-items: center;
@@ -37,16 +39,18 @@ header .container {
 }
 
 .logo img {
-  width: 45px;  /* adjust as needed */
+  width: 45px;       /* adjust as needed */
   height: 45px;
   border-radius: 50%; /* makes it round */
   object-fit: cover;
 }
-}
 
+/* Navigation */
 nav ul {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -64,6 +68,7 @@ nav ul li a:hover,
 nav ul li a.active {
   color: #ffcccc;
 }
+
 
 /* Hero Section */
 .hero {
