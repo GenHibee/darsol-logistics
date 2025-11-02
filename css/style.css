@@ -430,7 +430,7 @@ form#contact-form button {
 
 /* LEFT SIDE: About Text */
 .about-text {
-  flex: 1;
+  flex: 1 1 60%
   min-width: 50%;
 }
 
@@ -511,60 +511,5 @@ form#contact-form button {
 
   .ceo-info {
     text-align: center;
-  }
-}
-/* ---- Forceful debug override for about layout ---- */
-.about-section > .about-container,
-.about-container {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  justify-content: space-between !important;
-  align-items: flex-start !important;
-  gap: 40px !important;
-  max-width: 1200px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  box-sizing: border-box !important;
-}
-
-/* enforce column/stack on small screens */
-@media (max-width: 900px) {
-  .about-section > .about-container,
-  .about-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-}
-
-/* force widths for children */
-.about-container > .about-text {
-  flex: 1 1 60% !important;
-  min-width: 300px !important;
-  max-width: 720px !important;
-  box-sizing: border-box !important;
-}
-
-.about-container > .ceo-box {
-  flex: 0 0 35% !important;
-  min-width: 280px !important;
-  max-width: 420px !important;
-  box-sizing: border-box !important;
-}
-
-.about-container {
-  display: flex !important;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: nowrap;
-}
-
-/* Responsive: stack on mobile */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column !important;
-    align-items: center;
   }
 }
