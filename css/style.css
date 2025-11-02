@@ -28,8 +28,20 @@ header .container {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #fff;
+}
+
+.logo img {
+  width: 45px;  /* adjust as needed */
+  height: 45px;
+  border-radius: 50%; /* makes it round */
+  object-fit: cover;
+}
 }
 
 nav ul {
