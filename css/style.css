@@ -541,3 +541,42 @@ form#contact-form button {
     text-align: center;
   }
 }
+/* Responsive Header Fix */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.2rem; /* reduce text size on mobile */
+    gap: 6px;
+  }
+
+  .logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+}
