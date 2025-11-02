@@ -412,3 +412,66 @@ form#contact-form button {
   background-color: #1da851;
 }
 
+/* ---------- ABOUT SECTION ---------- */
+.about-section {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.about-text {
+  flex: 1;
+  color: #333;
+}
+
+.about-text h2 {
+  color: #b30000;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* CEO BOX */
+.ceo-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: #b30000;
+  color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.ceo-box img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.ceo-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.ceo-info p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
