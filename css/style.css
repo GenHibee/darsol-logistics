@@ -552,3 +552,19 @@ form#contact-form button {
   max-width: 420px !important;
   box-sizing: border-box !important;
 }
+
+.about-container {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
