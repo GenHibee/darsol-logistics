@@ -420,10 +420,9 @@ form#contact-form button {
 
 .about-container {
   display: flex;
-  flex-direction: row; /* force side-by-side on wide screens */
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* keep side by side on wide screens */
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -431,9 +430,8 @@ form#contact-form button {
 
 /* LEFT SIDE: About Text */
 .about-text {
-  flex: 1 1 60%;
-  min-width: 320px;
-  max-width: 700px;
+  flex: 1;
+  min-width: 50%;
 }
 
 .about-text h2 {
@@ -457,8 +455,7 @@ form#contact-form button {
 
 /* RIGHT SIDE: CEO BOX */
 .ceo-box {
-  flex: 1 1 35%;
-  min-width: 300px;
+  flex: 0 0 35%;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -502,9 +499,14 @@ form#contact-form button {
     text-align: center;
   }
 
-  .about-text,
   .ceo-box {
-    max-width: 90%;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .about-text {
+    width: 90%;
   }
 
   .ceo-info {
