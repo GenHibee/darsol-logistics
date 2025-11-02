@@ -21,12 +21,16 @@ header {
 
 /* Container inside Header */
 header .container {
-  width: 90%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* allows items to move to next line */
 }
+
 
 /* Logo Section */
 .logo {
@@ -578,5 +582,53 @@ form#contact-form button {
   .logo img {
     width: 32px;
     height: 32px;
+  }
+}
+/* Fix header overflow and responsiveness */
+header {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    flex-direction: column; /* stack logo + text */
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav ul li {
+    margin: 5px;
   }
 }
