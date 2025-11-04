@@ -17,6 +17,7 @@ header {
   background: #b30000;
   color: #fff;
   padding: 1rem 0;
+  overflow-x: hidden;
 }
 
 /* Container inside Header */
@@ -73,6 +74,13 @@ nav ul li a.active {
   color: #ffcccc;
 }
 
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
 
 /* Hero Section */
 .hero {
@@ -544,33 +552,44 @@ form#contact-form button {
   .ceo-info {
     text-align: center;
   }
-}
-/* Responsive Header Fix */
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
 @media (max-width: 768px) {
-  header .container {
+  /* Header adjustments */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    background: #b30000;
+  }
+
+  nav ul {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav.show {
+    display: flex;
   }
 
   .logo {
-    font-size: 1.2rem; /* reduce text size on mobile */
+    font-size: 1.2rem;
     gap: 6px;
   }
 
   .logo img {
     width: 38px;
     height: 38px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  nav ul li {
-    margin: 8px;
   }
 }
 
@@ -582,53 +601,5 @@ form#contact-form button {
   .logo img {
     width: 32px;
     height: 32px;
-  }
-}
-/* Fix header overflow and responsiveness */
-header {
-  overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo {
-    flex-direction: column; /* stack logo + text */
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .logo img {
-    width: 40px;
-    height: 40px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  nav ul li {
-    margin: 5px 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1rem;
-  }
-
-  .logo img {
-    width: 30px;
-    height: 30px;
-  }
-
-  nav ul li {
-    margin: 5px;
   }
 }
