@@ -44,8 +44,8 @@ header .container {
 }
 
 .logo img {
-  width: 45px;       /* adjust as needed */
-  height: 45px;
+  width: 60px;       /* adjust as needed */
+  height: 60px;
   border-radius: 50%; /* makes it round */
   object-fit: cover;
 }
