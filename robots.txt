@@ -1,0 +1,11 @@
+# robots.txt for Darsol Logistics
+User-agent: *
+Allow: /
+
+# Disallow any sensitive folders (if you have them)
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.darsollogistics.com/sitemap.xml
